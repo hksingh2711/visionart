@@ -1,0 +1,348 @@
+body {
+  cursor: none;
+  background-color: #212020;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(200, 200, 200, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.15s ease-out, border-color 0.3s ease;
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+}
+
+a:hover~.custom-cursor,
+button:hover~.custom-cursor,
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.8);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.card_section {
+  border-radius: 10px;
+  border: 3px solid #dd9933;
+  background: #000;
+}
+
+.navbar_row {
+  border-bottom: 1px solid #f4c066;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f4c066;
+}
+
+.btn-ticket {
+  background-color: #f4c066;
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.footer_border {
+  border-top: 1px solid #f4c066;
+}
+
+.footer {
+  background-color: #000;
+  padding: 40px 0;
+}
+
+.footer input {
+  max-width: 250px;
+  margin-right: 10px;
+}
+
+.footer a {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.footer a:hover {
+  color: #f4c066;
+}
+
+.footer .btn {
+  background-color: #f4c066;
+  color: #000;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #000000;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 12);
+  /* 6 images repeated twice */
+  animation: scroll 40s linear infinite;
+}
+
+.slider-wrapper:hover .slider-track {
+  animation-play-state: paused;
+}
+
+.slider-item {
+  width: 300px;
+  height: 250px;
+  margin: 0 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-item:hover img {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.slider-item:hover~.slider-item img {
+  transform: scale(0.95);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.contact-input {
+  background-color: #111 !important;
+  color: #f4c066 !important;
+  border: 1px solid #f4c066;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.contact-input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.contact-input:focus {
+  background-color: #111 !important;
+  color: #f4c066 !important;
+  border-color: #f4c066;
+  box-shadow: none;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #f4c066, #dd9933);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #dd9933, #f4c066);
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #dd9933;
+}
+
+.collection-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+}
+
+.img-box {
+  overflow: hidden;
+  border: 2px solid #f4c066;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.collection-gallery:hover .img-box img {
+  transform: scale(0.9);
+  filter: brightness(0.6) blur(1px);
+}
+
+.collection-gallery .img-box:hover img {
+  transform: scale(1.1);
+  z-index: 2;
+  filter: brightness(1) blur(0);
+}
+
+.size-4x6 {
+  aspect-ratio: 2/3;
+}
+
+.size-5x7 {
+  aspect-ratio: 5/7;
+}
+
+.size-5x5 {
+  aspect-ratio: 1/1;
+}
+
+.size-8x10 {
+  aspect-ratio: 4/5;
+}
+
+.size-12x12 {
+  aspect-ratio: 1/1;
+}
+
+.size-8x8 {
+  aspect-ratio: 1/1;
+}
+
+.img-box {
+  max-width: 200px;
+}
+
+.center-img {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: 1/1;
+}
+
+.our-team-section {
+  padding-bottom: 60px;
+  background-color: #000;
+  color: #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.team-member {
+  padding: 40px 20px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.team-member:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.team-member h3 {
+  font-size: 1.6rem;
+  color: #f5f5f5;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Hover image styling */
+.team-hover-image {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  border: 3px solid #fff;
+}
+
+.aboutus_sec {
+  background-image: url("https://olgasoby.com/cdn/shop/files/InnerBalancebyOlgaSoby-origianlabstractartforsale-fluidart1.jpg?v=1752697410&width=1800");
+  height: 500px;
+  background-position: center;
+}
+
+.about_text {
+  height: 200px;
+  margin-top: 150px;
+  text-align: justify;
+  font-family: "Lucida Handwriting", serif;
+  font-family: "Dancing Script", serif;
+}
+
+.about_text h2 {
+  color: #ebbf4d;
+}
+
+.about_overlay {
+  height: 500px;
+  position: relative;
+  background: #000;
+  opacity: 0.4;
+}
+
+.about_content {
+  position: relative;
+  top: -500px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 992px) {
+  .aboutus_sec {
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutus_sec {
+    background-position: bottom;
+  }
+}
